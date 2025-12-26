@@ -1,113 +1,120 @@
-🕒 Discord Auto Message Deletion Bot
+# 🕒 Discord Auto Message Deletion Bot
 
-A lightweight Discord bot built with discord.py that automatically deletes messages after a specified time, cleans channels, and provides simple moderation utilities.
+A lightweight **Discord moderation bot** built with `discord.py` that automatically deletes messages after a specified time, cleans channels, and provides simple utility commands.
 
-✨ Features
+---
 
-⏱ Timed message deletion
+## ✨ Features
 
-Automatically delete new messages after a set duration (seconds, minutes, or hours)
+- ⏱ **Timed Message Deletion**
+  - Automatically deletes new messages after a specified duration
+  - Supports seconds, minutes, and hours (`10s`, `5m`, `2h`)
+- 🧹 **Channel Cleaning**
+  - Bulk delete all messages in a channel
+- 🛑 **Stop Auto-Deletion**
+  - Disable message deletion per channel
+- 🏓 **Ping Command**
+  - Check if the bot is online and responsive
+- ⚡ **Rate-Limit Safe**
+  - Built-in delays to prevent Discord API abuse
 
-🧹 Channel cleaning
+---
 
-Bulk delete all messages in a channel
+## 📦 Requirements
 
-🛑 Stop deletion anytime
-
-Disable auto-deletion per channel
-
-🏓 Ping command
-
-Check bot latency and online status
-
-⚡ Rate-limit friendly
-
-Uses delays to avoid Discord API abuse
-
-📦 Requirements
-
-Python 3.8+
-
-discord.py (v2.0 or newer)
+- Python **3.8 or higher**
+- `discord.py` **v2.0+**
 
 Install dependencies:
-
+```bash
 pip install -U discord.py
 
 🚀 Setup & Installation
-
-Clone the repository
-
+1. Clone the Repository
 git clone https://github.com/yourusername/discord-auto-delete-bot.git
 cd discord-auto-delete-bot
-
-
-Create a Discord Bot
+2. Create a Discord Bot
 
 Go to the Discord Developer Portal
 
 Create a new application
 
-Add a bot and copy the Bot Token
+Add a bot
+
+Copy the Bot Token
 
 Enable Message Content Intent
 
-Configure the bot
-Replace the token in the code:
+3. Configure the Bot
+
+Open the bot file and replace:
 
 TOKEN = "YOUR-TOKEN"
 
-
-Run the bot
-
+4. Run the Bot
 python bot.py
 
 🧠 Commands
 Command	Description
-!timer 10s	Auto-delete new messages after 10 seconds
-!timer 5m	Auto-delete new messages after 5 minutes
-!timer 2h	Auto-delete new messages after 2 hours
+!timer 10s	Auto-delete messages after 10 seconds
+!timer 5m	Auto-delete messages after 5 minutes
+!timer 2h	Auto-delete messages after 2 hours
 !stop	Stop auto-deleting messages in the channel
 !clean	Delete all messages in the channel
 !ping	Check bot latency
 
-📌 Note: Only messages sent after !timer is activated will be deleted.
+📌 Note:
+Only messages sent after the !timer command is activated will be deleted.
 
-🔐 Permissions Needed
-
-Make sure the bot has:
+🔐 Required Permissions
 
 Read Messages
 
-Manage Messages
-
 Read Message History
+
+Manage Messages
 
 ⚠️ Important Notes
 
-The !clean command deletes all messages in a channel — use with caution
+!clean permanently deletes all messages in a channel — use with caution
 
-Timers are per-channel
+Timers are channel-specific
 
 Bot ignores messages from other bots
 
-Deletion runs every second for accuracy
+Auto-deletion checks every second for accuracy
 
 🛠 Customization Ideas
 
-Add per-user timers
+Convert commands to slash commands
 
 Add role-based permissions
 
-Save timers to a database
+Store timers in a database
 
-Slash command support (/timer, /stop, etc.)
+Per-user auto-delete timers
+
+Add logging and moderation features
 
 📄 License
 
-This project is licensed under the MIT License — free to use, modify, and distribute.
+This project is licensed under the MIT License.
 
 ❤️ Contributing
 
-Pull requests are welcome!
-If you find a bug or have a feature idea, feel free to open an issue.
+Contributions are welcome!
+
+Open an issue for bugs or feature requests
+
+Submit a pull request to improve the project
+
+
+---
+
+If you want, I can also:
+- Add badges (Python version, license, Discord)
+- Write a **CONTRIBUTING.md**
+- Make a **production-ready version**
+- Convert this to **slash commands**
+
+Just say the word 🚀
